@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
 const port = 5000;
-const axios = require("axios");
-const gotRoutes = require("./routes/got");
+const gameOfThronesRoutes = require("./routes/game-of-thrones");
+const pokemonRoutes = require("./routes/pokemon");
 
-app.use("/games-of-thrones", gotRoutes);
+app.use("/game-of-thrones", gameOfThronesRoutes);
+app.use("/pokemons", pokemonRoutes);
 
 app.listen(port, () => {
-  console.log(`App running on port ${port}`);
+  console.log(`Server running on ${port}`);
 });
